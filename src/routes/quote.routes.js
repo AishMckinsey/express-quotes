@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { quoteHandler, specificQuoteHandler } = require('../handler/quotes.handler');
+const { quoteHandler, specificQuoteHandler } = require('../handlers/quotes.handler');
 
 const router = express.Router();
 
