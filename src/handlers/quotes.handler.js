@@ -18,3 +18,8 @@ const specificquoteHandler = async (req, res) => {
     console.error(error);
   }
 };
+
+module.exports = {
+  specificquoteHandler,
+  quoteHandler,
+};
