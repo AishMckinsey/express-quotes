@@ -3,16 +3,20 @@ const axios = require('axios');
 const firstFiftyQuote = async () => {
   try {
     const quotes = await axios.get('https://type.fit/api/quotes');
-    // console.log(quotes);
     return quotes.data.slice(0, 50);
   } catch (err) {
     throw new Error('Data could not be retrieved');
   }
 };
 const getspecificQuote = async (index) => {
-  const quotes = await axios.get('https://type.fit/api/quotes');
-  return quotes.data[index];
+  try {
+    const quotes = await axios.get('https://type.fit/api/quotes');
+    return quotes.data[index];
+  } catch (err) {
+    throw new Error('Data could not be retrieved');
+  }
 };
 module.exports = {
-  firstFiftyQuote, getspecificQuote,
+  firstFiftyQuote,
+  getspecificQuote,
 };
