@@ -8,7 +8,7 @@ env.config();
 const port = process.env.PORT || 3000;
 const app = express();
 
-app.use('/health', healthRouter);
+// app.use('/health', healthRouter);
 app.use('/quote', quoteRouter);
 
 app.listen(port, () => {
